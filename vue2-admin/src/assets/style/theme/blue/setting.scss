@@ -1,0 +1,66 @@
+// 主题名称
+$theme_name: 'blue';
+// 背景颜色
+$theme_background_color: #143B87;
+// 距离右边宽度 0为铺满
+$theme_container_right: 0;
+// 侧边栏宽度
+$theme_side_width: 220px;
+// 头部栏高度
+$theme_header_height: 60px;
+// 头部栏背景颜色
+$theme_header_background_color: #1C69CD;
+// 头部栏菜单背景颜色
+$theme_header_menu_background_color: #1C69CD;
+// 头部栏文字颜色
+$theme_header_text_color: #ccc;
+// 头部栏文字actived颜色
+$theme_header_text_actived_color: #fff;
+// 头部栏hover背景颜色
+$theme_header_hover_color: #163D6B;
+// 内容背景颜色
+$theme_content_background_color: #eee;
+// 内容边框颜色
+$theme_content_border_color: #1C69CD;
+// 侧边栏背景颜色
+$theme_aside_background_color: #163D6B;
+// 侧边栏item hoveractived文字颜色
+$theme_aside_item_actived_background_color: rgba(5, 14, 37, .3);
+// 侧边栏item hover/actived文字颜色
+$theme_aside_item_actived_color: #fff;
+$theme_aside_item_color: #ccc;
+
+// tabs容器背景
+$theme_tabs_wrapper_background_color: #163D6B;
+// tabs容器高度
+$theme_tabs_wrapper_height: 60px;
+// tabs边框
+$theme_tabs_border: none;
+// tab-item未选择的背景
+$theme_tab_item_background_color: #375899;
+// tab-item未选择的文件颜色
+$theme_tab_item_color: #ccc;
+$theme_tab_item_hover_color: #fff;
+$theme_tab_item_actived_color: #163D6B;
+// tab-item之间的间距
+$theme_tab_item_spacing: 7px;
+// tab-item左上和右上的圆角
+$theme_tab_item_border_radius: 3px;
+// tab-item边框颜色
+$theme_tab_item_border_color: transparent;
+// tabs dropdown 距离右边
+$theme_tabs_dropdown_right: 10px;
+// tabs dropdown 边框
+$theme_tabs_dropdown_border_color: #375899;
+// tabs dropdown 背景颜色
+$theme_tabs_dropdown_background_color: #375899;
+// tabs dropdown 文字颜色
+$theme_tabs_dropdown_color: #fff;
+// tabs dropdown hover文字颜色
+$theme_tabs_dropdown_hover_color: #ccc;
+// tabs dropdown hover背景颜色
+$theme_tabs_dropdown_hover_background_color: #00aaff;
+// 路由视图左边框
+$theme_content_border_left: none;
+// 路由视图右边框
+$theme_content_border_right: none;

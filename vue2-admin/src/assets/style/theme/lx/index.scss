@@ -1,0 +1,9 @@
+@import './setting.scss';
+@import '../color.scss';
+@import '../element.scss';
+
+[data-theme='#{$theme_name}'] {
+  color: $--color-text-primary;
+  font-family: $--font-family-base;
+  font-size: $--font-size-base;
+}

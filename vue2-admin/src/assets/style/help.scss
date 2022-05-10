@@ -1,0 +1,197 @@
+.hide {
+  display:none;
+}
+
+.block {
+  display:block;
+}
+
+/* 盒子大小样式 */
+.full-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.full {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.full-h {
+  height: 100%;
+}
+
+.full-w {
+  width: 100% !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+.scroll-y {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+.scroll-x-y {
+  overflow: auto;
+}
+
+.no-border {
+  border: none !important;
+}
+
+// .height 30 ~ 500 以10递增 且 !important
+@for $i from 20 through 500 {
+  @if $i % 10==0 {
+    .h-#{$i} {
+      height: #{$i}px !important;
+    }
+  }
+}
+
+// .min-height 30 ~ 500 以10递增 (优先级低)
+@for $i from 20 through 600 {
+  @if $i % 10==0 {
+    .min-h-#{$i}{
+      min-height: #{$i}px;
+    }
+  }
+}
+
+// .width 20 ~ 500 以5递增
+@for $i from 20 through 500 {
+  @if $i % 5==0 {
+    .w-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+}
+// .min-width 20 ~ 500 以10递增 (优先级低)
+@for $i from 20 through 600 {
+  @if $i % 10==0 {
+    .min-w-#{$i}{
+      min-width: #{$i}px;
+    }
+  }
+}
+
+
+
+/*鼠标样式*/
+.cp {
+  cursor: pointer !important;
+}
+
+.cm {
+  cursor: move !important;
+}
+
+.cna {
+  cursor: not-allowed !important;
+}
+
+/* font 样式*/
+.fw-b {
+  font-weight: bold !important;
+}
+
+@for $i from 10 through 40 {
+  .fs-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+/*位置样式*/
+.fl-l {
+  float: left !important;
+}
+
+.fl-r {
+  float: right !important;
+}
+
+.align-l {
+  text-align: left !important;
+}
+
+.align-c {
+  text-align: center !important;
+}
+
+.align-r {
+  text-align: right !important;
+}
+
+/* 外边距margin */
+
+.no-margin {
+  margin: 0 !important;
+}
+
+@for $i from 0 through 30 {
+  .mg-#{$i} {
+    margin: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .mg-l-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .mg-t-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .mg-r-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .mg-b-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+}
+
+/* 内边距padding */
+@for $i from 0 through 30 {
+  .padding-#{$i} {
+    padding: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .pd-l-#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .pd-r-#{$i} {
+    padding-right: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .pd-t-#{$i} {
+    padding-top: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .pd-b-#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+}

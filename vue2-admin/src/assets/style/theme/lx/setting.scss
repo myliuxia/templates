@@ -1,0 +1,200 @@
+// 主题名称
+$theme_name: 'lx';
+
+/* font
+-------------------------- */
+$--font-size-base: 12px !default;
+$--font-family-base: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif !default;
+
+/* Colors
+-------------------------- */
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+
+$--color-primary: #1890ff !default;
+$--color-primary-light: #66b3ff !default;
+$--color-primary-lighter: mix($--color-white, $--color-primary, 90%) !default;
+
+$--color-success: #13c1a3 !default;
+$--color-success-light: #3ad3b8 !default;
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+
+$--color-warning: #ff8000 !default;
+$--color-warning-light: #ffb366 !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+
+$--color-danger: #f45454 !default;
+$--color-danger-light: #ff7a7a !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+
+$--color-info: #969faa !default;
+$--color-info-light: #e6e9f2 !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+
+$--color-primary-secondary: #e8f4ff !default;
+$--color-success-secondary: #e7f9f6 !default;
+$--color-warning-secondary: #fff2e6 !default;
+$--color-danger-secondary: #feeeee !default;
+$--color-info-secondary: #f5f5f7 !default;
+
+$--color-text-primary: #323a45 !default;
+$--color-text-regular: #667685 !default;
+$--color-text-secondary: #93a0ad !default;
+$--color-text-placeholder: #93a0ad !default;
+
+/* Background
+-------------------------- */
+$--background-color-base: #e8ecf0 !default;
+$--background-color-light: #f6f7fb !default;
+$--background-color-page: $--color-white !default;
+
+/* Border
+-------------------------- */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-color-base: #e6e9f2 !default;
+$--border-color-input: #dde1e6 !default;
+$--border-color-primary: $--color-primary !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-base-dashed: $--border-width-base dashed $--border-color-base !default;
+$--border-radius-base: 4px !default;
+$--border-radius-small: 2px !default;
+$--border-input: $--border-width-base $--border-style-base $--border-color-input !default;
+$--border-primary: $--border-width-base $--border-style-base $--border-color-primary !default;
+
+/* 页面布局
+-------------------------- */
+$--header-height: 50px !default;
+$--left-width: 160px !default;
+$--content-padding: 10px !default;
+$--content-min-width: 1140px !default;
+$--content-min-height: 600px !default;
+
+/* 左侧菜单栏
+-------------------------- */
+$--menu-bg-base: #262633 !default;
+$--menu-bg-active: #1a1a23 !default;
+$--menu-bg-hover: #2e2e3d !default;
+$--menu-color-base: #ffffff !default;
+$--menu-open-color: rgba(255, 255, 255, 0.8) !default;
+$--menu-color-active: $--color-primary !default;
+$--menu-color-hover: $--menu-color-base !default;
+$--menu-width: $--left-width; // 侧边栏宽度
+$--menu-width-collapse: 50px; // 侧边栏收起是的宽度
+$--menu-item-height: 40px; // 侧边栏行高
+$--menu-item-padding-left: 16px;
+$--menu-item-second-padding-left: 22px;
+$--menu-dot-radius:2px;
+$--menu-dot-margin-left:10px;
+
+$--logo-height: $--header-height; // logo高
+$--logo-text-color: $--menu-color-base; // logo颜色
+$--logo-icon-width: 28px; // logo图标宽
+$--logo-icon-height: 24px; // logo图标高
+$--logo-padding-left: $--menu-item-padding-left;
+$--logo-collapse-padding-left: ($--menu-width-collapse - $--logo-icon-width) / 2; // logo图标高
+
+$--logo-collapse-padding-left-c: 16px;
+
+/* 头部样式
+-------------------------- */
+$--header-bg-color: $--color-white;
+$--header-text-color: $--color-text-primary;
+
+/* 历史浏览tabs
+-------------------------- */
+$--history-tabs-height: 40px;
+$--history-tabs-bg-color: $--background-color-base;
+$--history-tabs-border: none;
+
+$--history-tabs-item-color: $--color-text-primary;
+$--history-tabs-item-bg-color: $--background-color-light;
+$--history-tabs-item-hover-color: $--color-primary;
+$--history-tabs-item-actived-color: $--color-primary;
+$--history-tabs-item-actived-bg-color: $--color-white;
+
+$--history-tabs-item-height: 32px;
+$--history-tabs-item-line-height: 32px;
+$--history-tabs-item-spacing: 6px;
+$--history-tabs-item-padding: 16px;
+$--history-tabs-item-border: none;
+$--history-tabs-item-radius: 4px;
+
+/* 页面内标签 tabs
+-------------------------- */
+$--page-tabs-height: 40px;
+$--page-tabs-text-size: 12px;
+$--page-tabs-padding: 10px;
+$--page-tabs-bottom-border: $--border-base;
+$--page-tabs-color: $--color-text-regular;
+$--page-tabs-actived-color: $--color-primary;
+
+$--page-tabs-item-padding: 16px;
+
+/* table样式
+-------------------------- */
+$--table-current-row-bg: rgba(24, 144, 255, 0.15); // 选中行背景色
+$--table-hover-row-bg: #f6f7fb; // 行hover时背景色
+$--table-header-bg: #f6f7fb; // 表头背景色
+$--table-header-text-color: $--color-text-regular; // 表头文字颜色
+$--table-body-text-color: $--color-text-primary; // 表格body文字颜色
+$--table-empty-margin-top: 40px;
+$--table-empty-img-width: 88px;
+$--table-empty-img-height: 88px;
+$--table-empty-text-size: 12px;
+$--table-empty-text-space: 0px;
+$--table-empty-text-color: $--color-text-secondary;
+
+/* pagination分页行
+-------------------------- */
+$--pagination-row-height:40px;
+$--pagination-row-padding:10px;
+
+
+/* el-steps覆盖样式
+-------------------------- */
+$--step-line-width: 1px !default;
+$--step-line-color: $--border-color-base !default;
+$--step-text-color: $--color-text-secondary !default;
+$--setp-text-active-color: $--color-white !default;
+$--setp-text-active-bg-color: $--color-primary !default;
+$--step-title-size: 12px !default;
+
+
+/* message-view组件样式
+-------------------------- */
+$--message-view-icon-size: 40px;
+$--message-view-title-size: 14px;
+$--message-view-title-color: $--color-text-primary;
+$--message-view-description-size: 12px;
+$--message-view-description-color: $--color-text-secondary;
+
+
+/* el-tag 覆盖样式
+-------------------------- */
+$--el-tag-mini-height: 20px !default;
+$--el-tag-mini-padding: 2px !default;
+$--el-tag-mini-border-width: 1px !default;
+
+$--tag-info-color:#A9B3BE !default;
+$--tag-info-border:#DDE1E6 !default;
+$--tag-info-bg:#FAFBFC !default;
+
+
+/* 弹框 el-dailog
+-------------------------- */
+$--dailog-border-radius: 0 0 $--border-radius-base $--border-radius-base !default;
+$--dailog-header-height: 50px !default;
+$--dailog-header-padding: 10px 20px !default;
+$--dailog-body-padding: 10px 20px 20px !default;
+$--dailog-footer-height: 48px !default;
+$--dailog-footer-bg: $--background-color-light !default;
+// 弹框内说明文字
+$--dailog-explain-bg: $--background-color-light !default;
+$--dailog-explain-radius: $--border-radius-base !default;
+$--dailog-explain-padding: 12px 16px !default;
+$--dailog-explain-margin: 10px 0 !default;
+$--dailog-explain-line-height: 1.6 !default;
+$--dailog-explain-size: 12px !default;
+$--dailog-explain-color: $--color-text-regular !default;

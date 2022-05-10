@@ -1,0 +1,20 @@
+$colors: ( 
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+  font-primary: $--color-text-primary,
+  font-regular: $--color-text-regular,
+  font-secondary: $--color-text-secondary,
+);
+@each $name in map-keys($colors) { 
+  .bg-#{$name}{ 
+    background-color: map-get($colors, $name) !important; 
+  } 
+}
+@each $name in map-keys($colors) { 
+  .text-#{$name}{ 
+    color: map-get($colors, $name) !important; 
+  } 
+}
