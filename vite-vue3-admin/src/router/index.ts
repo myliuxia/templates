@@ -13,13 +13,13 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/',
-    name: 'IndexPage',
+    name: 'LayoutPage',
     meta: {
       title: '首页',
       keepAlive: true,
       requireAuth: true
     },
-    component: () => import('@/pages/index.vue')
+    component: () => import('@/layout/index.vue')
   },
   {
     path: '/vueUse',

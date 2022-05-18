@@ -1,0 +1,44 @@
+[data-theme="#{$theme_name}"] {
+  /*------ 页面容器布局 Begin  ------*/
+  .layout_container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: $--background-color-base;
+    display: flex;
+    flex-direction: row;
+    .layout_menu {
+      width: $--layout-menu-width;
+      height: 100%;
+      background-color: $--color-warning-light; // TODO
+    }
+    .layout_content{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .layout_content_head {
+      height: $--layout-header-height;
+      line-height: $--layout-header-height;
+      background-color: $--color-success-light; // TODO
+    }
+    .layout_content_body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .tabs_wrapper {
+        height: $--history-tabs-height;
+        background-color: $--history-tabs-bg-color;
+      }
+      .router_view_body {
+        flex: 1;
+        box-sizing: border-box;
+        overflow-x: auto;
+        background-color: $--color-primary-light; // TODO
+      }
+
+    }
+  }
+  /*------ 页面容器布局 End  ------*/
+}

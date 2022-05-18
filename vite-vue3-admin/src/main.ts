@@ -3,6 +3,7 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import { setupElement } from '@/plugins/element';
+import './assets/style/index.scss'
 
 // 创建vue实例
 const app = createApp(App)
@@ -15,3 +16,6 @@ app.use(router)
 
 // 挂载示例
 app.mount('#app')
+
+
+window.document.body.setAttribute('data-theme', 'default')

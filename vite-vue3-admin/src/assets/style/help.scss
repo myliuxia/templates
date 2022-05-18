@@ -1,0 +1,272 @@
+.text-ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  white-space: normal;
+  line-height: 1.5;
+  word-break: break-all;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+@for $i from 12 through 20 {
+  .fs-#{$i} {
+    font-size: 12px;
+  }
+}
+
+// .padding-2 ~ 20
+@for $i from 0 through 20 {
+  .padding-#{$i} {
+    padding: #{$i}px !important;
+    box-sizing: border-box;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pd-l-#{$i} {
+    padding-left: #{$i}px !important;
+    box-sizing: border-box;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pd-r-#{$i} {
+    padding-right: #{$i}px !important;
+    box-sizing: border-box;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pd-t-#{$i} {
+    padding-top: #{$i}px !important;
+    box-sizing: border-box;
+  }
+}
+
+@for $i from 0 through 20 {
+  .pd-b-#{$i} {
+    padding-bottom: #{$i}px !important;
+    box-sizing: border-box;
+  }
+}
+
+// .margin-0 ~ 20
+@for $i from 0 through 20 {
+  .margin-#{$i} {
+    margin: #{$i}px !important;
+  }
+}
+
+// .margin-left -0 ~ 20
+@for $i from 0 through 20 {
+  .mg-l-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+}
+
+// .margin-top -0 ~ 20
+@for $i from 0 through 20 {
+  .mg-t-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+}
+
+// .margin-right -0 ~ 20
+@for $i from 0 through 20 {
+  .mg-r-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+}
+
+// .margin-bottom -2 ~ 20
+@for $i from 0 through 20 {
+  .mg-b-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+}
+
+// .width 20 ~ 500 以5递增
+@for $i from 20 through 500 {
+  @if $i % 5==0 {
+    .w-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+}
+
+//  .width 百分比(percent)
+@for $i from 0 through 100 {
+  .pct-#{$i} {
+    width: $i * 1%;
+  }
+}
+[class*="pct-"] {
+  float: left;
+  box-sizing: border-box;
+}
+
+
+// .height 30 ~ 500 以10递增 且 !important
+@for $i from -1 through 500 {
+  @if $i % 10==0 {
+    .h-#{$i} {
+      height: #{$i}px !important;
+    }
+  }
+}
+
+// .height 30 ~ 500 以10递增 (优先级低)
+@for $i from 20 through 500 {
+  @if $i % 10==0 {
+    .h-low-#{$i} {
+      height: #{$i}px;
+    }
+  }
+}
+// .min-height 30 ~ 500 以10递增 (优先级低)
+@for $i from 30 through 600 {
+  @if $i % 10==0 {
+    .min-h-#{$i} {
+      min-height: #{$i}px;
+    }
+  }
+}
+// .max-height 30 ~ 500 以10递增 (优先级低)
+@for $i from 30 through 600 {
+  @if $i % 10==0 {
+    .max-h-#{$i} {
+      max-height: #{$i}px;
+    }
+  }
+}
+
+// .min-width 30 ~ 500 以10递增 (优先级低)
+@for $i from 30 through 600 {
+  @if $i % 10==0 {
+    .min-w-#{$i} {
+      min-width: #{$i}px;
+    }
+  }
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.abs.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.full-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.full {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.full-h {
+  height: 100%;
+}
+
+.full-w {
+  width: 100% !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+.scroll-y {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+.scroll-x-y {
+  overflow: auto;
+}
+
+.cp {
+  cursor: pointer !important;
+}
+
+.cm {
+  cursor: move !important;
+}
+
+.cna {
+  cursor: not-allowed !important;
+}
+
+.fw-b {
+  font-weight: bold !important;
+}
+
+.fw-n {
+  font-weight: normal !important;
+}
+
+@for $i from 10 through 20 {
+  .fs-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+.fl-l {
+  float: left !important;
+}
+
+.fl-r {
+  float: right !important;
+}
+
+.dp-i-b {
+  display: inline-block;
+}
+.transition{
+  transition: all .3s;
+}

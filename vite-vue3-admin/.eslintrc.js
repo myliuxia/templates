@@ -39,7 +39,8 @@ module.exports = {
       }
     ],
     'space-before-function-paren': 'off',
-    quotes: ['error', 'single']
+    quotes: ['error', 'single'],
+    'vue/multi-word-component-names': 0
     // 'comma-dangle': ['error', 'never']
   }
 }
