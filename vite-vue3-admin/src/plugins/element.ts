@@ -19,7 +19,10 @@ import {
   ElLoading,
   ElMessage,
   ElMessageBox,
-  ElNotification
+  ElNotification,
+  ElScrollbar,
+  ElBreadcrumb,
+  ElBreadcrumbItem
 } from 'element-plus';
 
 const components = [
@@ -35,7 +38,10 @@ const components = [
   ElForm,
   ElFormItem,
   ElInput,
-  ElIcon
+  ElIcon,
+  ElScrollbar,
+  ElBreadcrumb,
+  ElBreadcrumbItem
 ];
 
 const plugins = [ElInfiniteScroll, ElLoading, ElMessage, ElMessageBox, ElNotification];

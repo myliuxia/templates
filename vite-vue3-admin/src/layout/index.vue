@@ -8,7 +8,9 @@
     <!-- 右侧 -->
     <div class="layout_content">
       <!-- 头部  -->
-      <div class="layout_content_head"></div>
+      <div class="layout_content_head">
+        <header-content></header-content>
+      </div>
       <!-- body -->
       <div class="layout_content_body">
         <!-- tabs -->
@@ -27,10 +29,11 @@
 import { defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import AsideMenu from './aside/index.vue'
+import HeaderContent from './header/index.vue'
 
 export default defineComponent({
   name: 'LayoutPage',
-  components: { AsideMenu },
+  components: { AsideMenu, HeaderContent },
   setup() {
     const router = useRouter()
     const userMenuShow = ref<boolean>(false)
