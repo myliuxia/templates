@@ -1,4 +1,4 @@
-[data-theme="#{$theme_name}"] {
+[data-theme='#{$theme_name}'] {
   /*------ 页面容器布局 Begin  ------*/
   .layout_container {
     height: 100%;
@@ -13,14 +13,14 @@
       height: 100%;
       background-color: $--layout-menu-bg; // TODO
     }
-    .layout_content{
+    .layout_content {
       display: flex;
       flex-direction: column;
       flex: 1;
     }
     .layout_content_head {
       height: $--layout-header-height;
-      background-color: $--layout-header-bg; 
+      background-color: $--layout-header-bg;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -34,24 +34,28 @@
         height: $--history-tabs-height;
         background-color: $--history-tabs-bg-color;
       }
-      .router_view_body {
+      .router_view {
         flex: 1;
         box-sizing: border-box;
-        overflow-x: auto;
-        background-color: $--color-primary-light; // TODO
+        // background-color: $--color-primary-light; // TODO
+        padding: 12px; // TODO
       }
-
+      .router_view_body {
+        background-color: #ffffff;
+        height: 100%;
+        overflow: auto;
+      }
     }
   }
   /*------ 页面容器布局 End  ------*/
-  
+
   /*------ 左侧菜样式 Begin  ------*/
-  .aside-menu{
+  .aside-menu {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    .aside-logo{
+    .aside-logo {
       height: $--layout-header-height;
       line-height: $--layout-header-height;
       font-weight: 700;

@@ -4,7 +4,7 @@
       <span>Admin 模板</span>
     </div>
     <el-scrollbar height="100%">
-      <el-menu class="menu-vertical" :collapse="isCollapse" @open="handleOpen" @close="handleClose">
+      <el-menu class="menu-vertical" :collapse="isCollapse" @open="handleOpen" @close="handleClose" @select="handleMenuSelect">
         <sub-menu
           v-for="(item, index) in menuItems"
           :key="index"
@@ -19,6 +19,8 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import SubMenu from './sub-menu.vue'
+import { useRouter } from 'vue-router';
+const router = useRouter()
 
 const isCollapse = ref(false)
 const handleOpen = (key: string, keyPath: string[]) => {
@@ -27,12 +29,18 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
+const handleMenuSelect = (path: string) =>{
+  console.log(path)
+  if(path){
+    router.push(path)
+  }
+}
 
 let menuItems: any = ref([])
 // 获得菜单
 function getMenus(): Array<Object> {
   return [
-    { title: '菜单一', children: [{ title: '菜单一（01）' }, { title: '菜单一（02）' }] },
+    { title: '菜单一', children: [{ title: '菜单一（01）',path:'/demo/demo1' }, { title: '菜单一（02）',path:'/demo/demo2' }] },
     { title: '菜单二', children: [{ title: '菜单二（01）' }, { title: '菜单二（02）' }] },
     {
       title: '菜单三',

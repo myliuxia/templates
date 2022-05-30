@@ -1,6 +1,6 @@
 <template>
   <div class="location-box">
-    <el-icon  :size="20" ><LocationFilled /></el-icon>
+    <el-icon :size="20" ><LocationFilled /></el-icon>
     <el-breadcrumb :separator-icon="ArrowRight">
       <el-breadcrumb-item to="/">首页</el-breadcrumb-item>
       <el-breadcrumb-item > 一级菜单</el-breadcrumb-item>

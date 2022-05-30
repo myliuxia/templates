@@ -14,12 +14,17 @@
       <!-- body -->
       <div class="layout_content_body">
         <!-- tabs -->
-        <div class="tabs_wrapper"></div>
+        <div class="tabs_wrapper">
+          <krTabs></krTabs>
+        </div>
         <!-- 路由 -->
-        <div flex-box="1" class="router_view_body">
+        <div flex-box="1" class="router_view">
+          <div class="router_view_body">
           <keep-alive>
             <router-view ></router-view>
           </keep-alive>
+
+          </div>
         </div>
       </div>
     </div>
@@ -30,10 +35,11 @@ import { defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import AsideMenu from './aside/index.vue'
 import HeaderContent from './header/index.vue'
+import krTabs from './tabs/index.vue'
 
 export default defineComponent({
   name: 'LayoutPage',
-  components: { AsideMenu, HeaderContent },
+  components: { AsideMenu, HeaderContent, krTabs },
   setup() {
     const router = useRouter()
     const userMenuShow = ref<boolean>(false)
