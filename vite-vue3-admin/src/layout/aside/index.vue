@@ -20,6 +20,7 @@
 import { ref, onMounted } from 'vue'
 import SubMenu from './sub-menu.vue'
 import { useRouter } from 'vue-router';
+import {Menus} from '@/router/map'
 const router = useRouter()
 
 const isCollapse = ref(false)
@@ -36,40 +37,9 @@ const handleMenuSelect = (path: string) =>{
   }
 }
 
-let menuItems: any = ref([])
-// 获得菜单
-function getMenus(): Array<Object> {
-  return [
-    { title: '菜单一', children: [{ title: '菜单一（01）',path:'/demo/demo1' }, { title: '菜单一（02）',path:'/demo/demo2' }] },
-    { title: '菜单二', children: [{ title: '菜单二（01）' }, { title: '菜单二（02）' }] },
-    {
-      title: '菜单三',
-      children: [
-        { title: '菜单三（01）' },
-        { title: '菜单三（02）' },
-        { title: '菜单三（04）' },
-        { title: '菜单三（05）' },
-        { title: '菜单三（06）' },
-        { title: '菜单三（07）' },
-        { title: '菜单三（08）' },
-        { title: '菜单三（09）' },
-        { title: '菜单三（10）' },
-        { title: '菜单三（11）' },
-        { title: '菜单三（12）' },
-        { title: '菜单三（13）' },
-        { title: '菜单三（14）' },
-        { title: '菜单三（15）' },
-        { title: '菜单三（16）' },
-        { title: '菜单三（17）' },
-        { title: '菜单三（18）' },
-        { title: '菜单三（19）' }
-      ]
-    },
-    { title: '菜单四' }
-  ]
-}
+let menuItems: any = ref(Menus)
 onMounted(() => {
-  menuItems.value = getMenus()
+  // menuItems.value = getMenus()
 })
 </script>
 <style lang="scss">

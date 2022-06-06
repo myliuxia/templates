@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { Routers } from './map'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -44,7 +45,8 @@ const routes: Array<RouteRecordRaw> = [
           keepAlive: true,
         },
         component: () => import('@/pages/demo/demo2.vue'),
-      }
+      },
+      ...Routers
     ]
   },
 ]
