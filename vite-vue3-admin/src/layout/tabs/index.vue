@@ -1,33 +1,41 @@
 <template>
   <el-tabs
+    v-model="current"
     type="card"
     class="el-tabs-card"
-    :value="current"
-    @tab-click="handleClick"
-    @edit="handleEdit"
+    @tab-change="handleChange"
+    @tab-remove="handleRemove"
   >
     <el-tab-pane
-      v-for="item of tabs"
-      :key="item.name"
-      :closable="item.name !== 'home' && tabs.length !== 1"
-      :name="item.name"
+      v-for="item of historyPages"
+      :key="item.path"
+      :closable="item.name !== 'home' && historyPages.length !== 1"
+      :name="item.path"
     >
       <template #label>
         <span>{{ item.meta.title }}</span>
-        <span
-          v-show="current === item.name"
-          class="el-icon-refresh __el_tab_refresh"
-          @click="handleRefreshClick"
-        ></span>
       </template>
     </el-tab-pane>
   </el-tabs>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
-let current = ref('home')
-let tabs = ref([{ name: 'home', meta: { title: '首页' } },{ name: 'router1', meta: { title: '菜单1' } },{ name: 'menu1', meta: { title: '菜单2' } },])
-const handleClick = () => {}
-const handleEdit = () => {}
-const handleRefreshClick = () => {}
+import { ref, computed, watch  } from 'vue'
+import { usePageStore } from '@/store/page'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const pageStore = usePageStore()
+let current = ref('')
+current.value = pageStore.currentPath
+
+let historyPages = computed(() => pageStore.historyPages)
+let currentPath = computed(() => pageStore.currentPath)
+watch(currentPath,(newVal)=>{
+  current.value = newVal || ''
+})
+const handleChange = (path: any) => {
+  router.push({ path: path })
+}
+const handleRemove = (path: any) => {
+  pageStore.closePage(path as string)
+}
 </script>

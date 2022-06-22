@@ -46,7 +46,7 @@ const MAPS: Array<RouterMap> = [
     id: '2',
     title: '路由test',
     icon: 'el-base',
-    pid: ''
+    pid: '',
   },
   {
     id: '2-1',
