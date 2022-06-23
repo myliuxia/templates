@@ -17,6 +17,7 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+      overflow: hidden;
     }
     .layout_content_head {
       height: $--layout-header-height;
@@ -30,15 +31,18 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+      padding: 12px; // TODO
       .tabs_wrapper {
         height: $--history-tabs-height;
         background-color: $--history-tabs-bg-color;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
       }
       .router_view {
         flex: 1;
         box-sizing: border-box;
-        // background-color: $--color-primary-light; // TODO
-        padding: 12px; // TODO
       }
       .router_view_body {
         background-color: #ffffff;
@@ -48,6 +52,70 @@
     }
   }
   /*------ 页面容器布局 End  ------*/
+
+  /*------ 页面tab标签样式 Begin  ------*/
+  .page-tabs {
+    display: block;
+    width: 100%;
+    .el-tabs__header {
+      margin-bottom: 0;
+      user-select: none;
+      border: none;
+      /* el-tabs__item Begin */
+      .el-tabs__item {
+        margin-left: 6px;
+        margin-bottom: -3px;
+        border: none;
+        color: #323a45;
+        background-color: #f6f7fb;
+        position: relative;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 16px;
+        font-size: 12px;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:not(.is-active):first-child {
+          margin-left: 0px;
+        }
+
+        &:hover {
+          color: $--color-primary;
+        }
+        &.is-active {
+          border-bottom: none;
+          z-index: 1;
+          color: $--color-primary;
+          background-color: $--color-white;
+        }
+        &.is-active.is-closable {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .is-icon-close {
+          &:hover {
+            background-color: $--color-primary;
+            color: $--color-white;
+          }
+        }
+      }
+      /* el-tabs__item End */
+      .el-tabs__nav {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 4px;
+      }
+      .el-tabs__nav-prev,
+      .el-tabs__nav-next {
+        line-height: 32px;
+      }
+    }
+  }
+  /*------ 页面tab标签样式 End  ------*/
 
   /*------ 左侧菜样式 Begin  ------*/
   .aside-menu {
@@ -63,6 +131,7 @@
     .menu-vertical {
       flex: 1;
       width: 200px;
+      border-right: none;
     }
   }
   /*------ 左侧菜样式 End  ------*/

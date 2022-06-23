@@ -64,6 +64,60 @@ const MAPS: Array<RouterMap> = [
     component: () => import('@/pages/demo/demo1.vue'),
     pid: ''
   },
+  {
+    id: '4',
+    title: '路由test',
+    icon: 'el-base',
+    pid: ''
+  },
+  {
+    id: '4-1',
+    title: '页面布局01',
+    path: '/test4/test_1',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
+  {
+    id: '4-2',
+    title: '页面布局02',
+    path: '/test4/test_2',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
+  {
+    id: '4-3',
+    title: '页面布局03',
+    path: '/test4/test_3',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
+  {
+    id: '4-4',
+    title: '页面布局01',
+    path: '/test4/test_4',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
+  {
+    id: '4-5',
+    title: '页面布局05',
+    path: '/test4/test_5',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
+  {
+    id: '4-6',
+    title: '页面布局06',
+    path: '/test4/test_6',
+    icon: '',
+    pid: '4',
+    component: () => import('@/pages/demo/demo1.vue')
+  },
 ]
 
 export default MAPS
