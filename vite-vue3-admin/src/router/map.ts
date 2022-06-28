@@ -13,6 +13,14 @@ interface RouterMap {
 
 const MAPS: Array<RouterMap> = [
   {
+    id: '0',
+    path: '/home',
+    title: '首页',
+    icon: '',
+    pid: '',
+    component: () => import('@/pages/home/index.vue'),
+  },
+  {
     id: '1',
     title: '基础页面',
     icon: 'el-base',

@@ -19,33 +19,6 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import('@/layout/index.vue'),
     children: [
-      {
-        path: '/home',
-        name: 'home',
-        meta: {
-          title: 'home',
-          keepAlive: true,
-        },
-        component: () => import('@/pages/home/index.vue'),
-      },
-      {
-        path: '/demo/demo1',
-        name: 'page-demo1',
-        meta: {
-          title: 'demo1',
-          keepAlive: true,
-        },
-        component: () => import('@/pages/demo/demo1.vue'),
-      },
-      {
-        path: '/demo/demo2',
-        name: 'page-demo2',
-        meta: {
-          title: 'demo1',
-          keepAlive: true,
-        },
-        component: () => import('@/pages/demo/demo2.vue'),
-      },
       ...Routers
     ]
   },
