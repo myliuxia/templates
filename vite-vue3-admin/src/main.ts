@@ -4,10 +4,12 @@ import store from './store'
 import router from './router'
 import { setupElement } from '@/plugins/element';
 import './assets/style/index.scss'
-import { usePageStore } from '@/store/page'
 import { RouteLocationNormalized } from 'vue-router';
 import { PageRoute } from './router/types';
 import { initState } from './store/persistence'
+import { usePageStore } from '@/store/page'
+import { useMenuStore } from '@/store/menu'
+import { Menus } from '@/router/map'
 
 const bootstrap = () => {
   // 创建vue实例
@@ -20,6 +22,8 @@ const bootstrap = () => {
   app.mount('#app')
   // 添加路由监听
   const pageStore = usePageStore()
+  const menuStore = useMenuStore()
+  menuStore.setVisibleMenu(Menus)
   router.afterEach((to: RouteLocationNormalized) => {
     const curPageRoute: PageRoute = {
       name: to.name,

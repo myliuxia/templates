@@ -1,7 +1,7 @@
 import { RouteComponent, RouteRecordRaw } from 'vue-router'
 type Lazy<T> = () => Promise<T>;
 type RawRouteComponent = RouteComponent | Lazy<RouteComponent>;
-interface RouterMap {
+export declare interface RouterMap {
   title: string;
   id: string;
   pid: string;
@@ -28,10 +28,16 @@ const MAPS: Array<RouterMap> = [
   },
   {
     id: '1-1',
+    title: '页面布局',
+    icon: '',
+    pid: '1',
+  },
+  {
+    id: '1-1-1',
     title: '页面布局01',
     path: '/base/layout_1',
     icon: '',
-    pid: '1',
+    pid: '1-1',
     component: () => import('@/pages/demo/demo1.vue')
   },
   {
@@ -148,7 +154,12 @@ export const Routers: Array<RouteRecordRaw> = MAPS.filter(item => !!item.path).m
     component: item.component as RawRouteComponent,
   }
 })
-
+/**
+ * 递归处理数组，生产树状结构菜单
+ * @param map 数组对象
+ * @param value 父节点id值
+ * @returns 树状数组
+ */
 function recursion(map: Array<RouterMap>, value: string): Array<RouterMap> {
   const result: Array<RouterMap> = []
   let children: Array<RouterMap>
